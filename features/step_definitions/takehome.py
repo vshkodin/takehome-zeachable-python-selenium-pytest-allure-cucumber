@@ -32,6 +32,14 @@ def validate_sign_up_page(init_driver):
 def validate_sign_up_page(init_driver):
     init_driver.find_element(By.CSS_SELECTOR, "[href='/p/terms']").click()
 
+@then(parsers.parse('Click on Privacy Policy'))
+def validate_sign_up_page(init_driver):
+    init_driver.find_element(By.CSS_SELECTOR, "[href='/p/privacy']").click()
+
 @then(parsers.parse('Validate page title with text "{TEXT}"'))
 def validate_page_title(init_driver, TEXT):
    assert TEXT in init_driver.title, f"{TEXT} not in {init_driver.title}"
+
+@then(parsers.parse('Logout User'))
+def logout_user(init_driver):
+    init_driver.get("https://takehome.zeachable.com/sign_out")
