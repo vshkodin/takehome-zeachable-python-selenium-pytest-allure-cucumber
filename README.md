@@ -10,8 +10,8 @@ https://takehome.zeachable.com/
 ### How to Build/Run locally:
 #### Clone repo:
 ```
-git clone https://github.com/vshkodin/takehome-zeachable-python-selenium-pytest-allure-cucumber.git
-cd takehome-zeachable-python-selenium-pytest-allure-cucumber
+git clone https://github.com/vshkodin/takehome-zeachable-python-selenium-pytest-allure-cucumber-docker-newman-backstopjs.git
+cd takehome-zeachable-python-selenium-pytest-allure-cucumber-docker-newman-backstopjs
 ```
 #### Dependencies 
 1. In order to run you have to install Python3.6+
