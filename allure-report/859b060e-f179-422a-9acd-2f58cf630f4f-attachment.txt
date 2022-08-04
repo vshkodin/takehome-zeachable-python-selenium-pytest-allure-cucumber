@@ -1,2 +1,0 @@
-var expect_status = 200
-pm.response.to.have.status(expect_status)

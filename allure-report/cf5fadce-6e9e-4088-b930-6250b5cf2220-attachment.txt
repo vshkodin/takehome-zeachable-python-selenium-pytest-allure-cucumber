@@ -1,3 +1,0 @@
-var jsonData = pm.response.json()
-var expect_status = 201
-pm.response.to.have.status(expect_status)
