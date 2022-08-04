@@ -44,3 +44,8 @@ newman run  --verbose https---takehome.zeachable.com-.postman_collection.json
 ```
 
 ### VRT tests using BackstopJS
+
+```commandline
+ npm install -g backstopjs
+ backstop test
+```
