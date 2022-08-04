@@ -8,7 +8,7 @@
 https://takehome.zeachable.com/
 
 ### How to Build/Run locally:
-#### clone repo:
+#### Clone repo:
 ```
 git clone https://github.com/vshkodin/takehome-zeachable-python-selenium-pytest-allure-cucumber.git
 cd takehome-zeachable-python-selenium-pytest-allure-cucumber
@@ -20,7 +20,7 @@ cd takehome-zeachable-python-selenium-pytest-allure-cucumber
 4. install python3 - pip  https://www.python.org/downloads/
 5. Getting dependencies:
 ```
-$ pip install virtualenv
+$ pip3 install virtualenv
 $ python3 virtualenv env
 $ env/Scripss/activate (for win)
 $ source env/bin/activate (for mac-linux)
