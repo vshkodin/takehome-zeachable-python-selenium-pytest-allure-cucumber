@@ -28,6 +28,12 @@ $ brew install allure
 ```
 
 #### Running  tests
+
+![alt text](SeleniumResults.png)
+
+![alt text](SeleniumAllureResults.png)
+
+
 * Headful is default run
 ```
 pytest 

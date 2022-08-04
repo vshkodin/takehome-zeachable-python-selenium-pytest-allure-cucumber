@@ -8,6 +8,10 @@ Feature: Takehome zeachable
         Given Auth User
         Then Validate that Profile icon exist
 
+    Scenario: Validating ability see course
+        Given I am on Homepage
+        Then Click on course
+
     Scenario: User is able to open Terms of Use
         Given I am on Homepage
         Then Click on tou

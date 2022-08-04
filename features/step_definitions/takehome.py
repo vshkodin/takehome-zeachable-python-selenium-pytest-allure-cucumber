@@ -34,11 +34,20 @@ def validate_sign_up_page(init_driver):
 
 @then(parsers.parse('Click on Privacy Policy'))
 def validate_sign_up_page(init_driver):
-    init_driver.find_element(By.CSS_SELECTOR, "[href='/p/privacy']").click()
+    init_driver.find_element(By.CSS_SELECTOR, "[href='/p/privacy']").click()\
+
+@then(parsers.parse('Click on course'))
+def click_on_course(init_driver):
+    init_driver.find_element(By.CSS_SELECTOR, "[class='course-listing-title']").click()
 
 @then(parsers.parse('Validate page title with text "{TEXT}"'))
 def validate_page_title(init_driver, TEXT):
    assert TEXT in init_driver.title, f"{TEXT} not in {init_driver.title}"
+
+@then(parsers.parse('Validate that user on course page"'))
+def Validate_user_on_course_page(init_driver):
+    text = init_driver.find_element(By.CSS_SELECTOR, "[class='section-title']").text
+    assert 'Course Curriculum' in text
 
 @then(parsers.parse('Logout User'))
 def logout_user(init_driver):
