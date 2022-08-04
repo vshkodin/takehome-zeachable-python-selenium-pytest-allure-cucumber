@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "12fb44e5-450b-42c2-9180-117e3fe81433",
+		"name": "https://takehome.zeachable.com/",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6076399"
+	},
+	"item": [
+		{
+			"name": "POST /fedora-studen",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json()",
+							"var expect_status = 201",
+							"pm.response.to.have.status(expect_status)",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"noun\": \"user\",\n    \"noun_id\": \"5ddea9a3-c3fc-43b4-aaa9-2e27e3ccc488\",\n    \"verb\": \"page_loaded\",\n    \"created_at\": 1659576181362,\n    \"meta\": {\n        \"user_agent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\",\n        \"fingerprint\": \"5ddea9a3-c3fc-43b4-aaa9-2e27e3ccc488\",\n        \"path\": \"/\",\n        \"referred_from\": \"https://takehome.zeachable.com/\",\n        \"url\": \"https://takehome.zeachable.com/\",\n        \"session_id\": \"5ddea9a3-c3fc-43b4-aaa9-2e27e3ccc488\",\n        \"school_id\": \"123\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://eventable.zeachable.cloud/add/fedora-studen",
+					"protocol": "https",
+					"host": [
+						"eventable",
+						"zeachable",
+						"cloud"
+					],
+					"path": [
+						"add",
+						"fedora-studen"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

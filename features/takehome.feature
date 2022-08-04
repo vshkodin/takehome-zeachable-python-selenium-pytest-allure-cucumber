@@ -7,3 +7,7 @@ Feature: Takehome zeachable
     Scenario: Auth user
         Given Auth User
         Then Validate that Profile icon exist
+
+    Scenario: User is able to open Privacy Policy
+        Given I am on Homepage
+        Then Click on tou

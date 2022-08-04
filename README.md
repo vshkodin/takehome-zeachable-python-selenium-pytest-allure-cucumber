@@ -35,3 +35,12 @@ pytest
 ```
 pytest --headless true
 ```
+
+### API tests Using Postman Newman
+
+```
+npm install -g newman
+newman run  --verbose https---takehome.zeachable.com-.postman_collection.json
+```
+
+### VRT tests using BackstopJS
