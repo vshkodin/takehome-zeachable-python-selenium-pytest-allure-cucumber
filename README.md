@@ -51,12 +51,15 @@ allure serve allure-report
 
 ### API tests Using Postman Newman
 * CLI report for API
+
 ![alt text](NewmanPostman.png)
 
 * Allure report for API
+
 ![alt text](allure-report-API.png)
 
 * HOW to run
+* 
 ```
 npm install -g newman
 npm install -g newman-reporter-allure
