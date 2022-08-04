@@ -1,4 +1,9 @@
 from pytest_bdd import scenarios, given, then, parsers, when
+from selenium.webdriver.common.by import By
+from time import sleep
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 scenarios('', strict_gherkin=False)
 
@@ -9,9 +14,10 @@ def open_homepage(init_driver):
 @given("Auth User")
 def auth_user(init_driver):
     init_driver.get("https://sso.zeachable.com/secure/123/identity/login/password")
-    init_driver.find_element_by_css_selector("[id='email']").send_keys("test@test.com")
-    init_driver.find_element_by_css_selector("[id='password']").send_keys("123456")
-    init_driver.find_element_by_css_selector("[data-testid='login-button']").click()
+    init_driver.find_element(By.CSS_SELECTOR, "[id='email']").send_keys("test@test.com")
+    init_driver.find_element(By.CSS_SELECTOR, "[id='password']").send_keys("123456")
+    init_driver.find_element(By.CSS_SELECTOR, "[data-testid='login-button']").click()
+
 
 @given("I am on Homepage")
 def open_homepage(init_driver):
@@ -20,3 +26,9 @@ def open_homepage(init_driver):
 @then(parsers.parse('I am validating url with "{PATH}"'))
 def validate_sign_up_page(init_driver, PATH):
    assert PATH in init_driver.current_url, f"{PATH} not in {init_driver.current_url}"
+
+@then(parsers.parse('Validate that Profile icon exist'))
+def validate_sign_up_page(init_driver):
+    prifile = init_driver.find_element(By.CSS_SELECTOR, "[data-toggle='dropdown']")
+    assert prifile.accessible_name == "test@test.com", 'Profile icon is not present'
+
