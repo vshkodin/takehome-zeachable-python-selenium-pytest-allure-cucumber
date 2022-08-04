@@ -49,6 +49,118 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Forgot Password",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var expect_status = 200",
+							"pm.response.to.have.status(expect_status)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sso.zeachable.com/secure/123/identity/forgot_password",
+					"protocol": "https",
+					"host": [
+						"sso",
+						"zeachable",
+						"com"
+					],
+					"path": [
+						"secure",
+						"123",
+						"identity",
+						"forgot_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var expect_status = 200",
+							"pm.response.to.have.status(expect_status)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sso.zeachable.com/secure/123/identity/sign_up/email?",
+					"protocol": "https",
+					"host": [
+						"sso",
+						"zeachable",
+						"com"
+					],
+					"path": [
+						"secure",
+						"123",
+						"identity",
+						"sign_up",
+						"email"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var expect_status = 200",
+							"pm.response.to.have.status(expect_status)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sso.zeachable.com/secure/123/identity/login",
+					"protocol": "https",
+					"host": [
+						"sso",
+						"zeachable",
+						"com"
+					],
+					"path": [
+						"secure",
+						"123",
+						"identity",
+						"login"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
