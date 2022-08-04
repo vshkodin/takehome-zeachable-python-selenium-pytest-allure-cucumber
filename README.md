@@ -31,9 +31,9 @@ $ brew install node
 
 #### Running  tests
 
-![alt text](SeleniumResults.png)
+![alt text](img/SeleniumResults.png)
 
-![alt text](SeleniumAllureResults.png)
+![alt text](img/SeleniumAllureResults.png)
 
 
 * Headful is default run
@@ -63,11 +63,11 @@ make ui-docker-test
 ## API tests Using Postman Newman
 * CLI report for API
 
-![alt text](NewmanPostman.png)
+![alt text](img/NewmanPostman.png)
 
 * Allure report for API
 
-![alt text](allure-report-API.png)
+![alt text](img/allure-report-API.png)
 
 * HOW to build
 
@@ -98,7 +98,7 @@ make api-report
 ## VRT tests using BackstopJS
 
 * BackstopJS report
-![alt text](backstopJSReport.png)
+![alt text](img/backstopJSReport.png)
 
 
 * HOW to run
