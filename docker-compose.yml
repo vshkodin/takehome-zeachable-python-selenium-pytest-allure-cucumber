@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+    chrome:
+        image: selenium/standalone-chrome:latest
+        hostname: chrome
+        networks:
+          - web
+        privileged: true
+        shm_size: 2g
+    test-framework:
+        build:
+          context: .
+          dockerfile: Dockerfile.python-pytest
+        image: shiftleft/ui-selenium-testing:latest
+        user: ${CURRENT_UID}
+        environment:
+        volumes:
+          - type: bind
+            source: ./allure-report
+            target: /allure-report
+        networks:
+            - web
+        depends_on:
+            - chrome
+        command: [ "/run_ui.sh" ]
+
+networks:
+    web:
+      external: true
+      driver:  bridge

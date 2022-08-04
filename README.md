@@ -53,6 +53,13 @@ make ui-test-headless
 make ui-report
 ```
 
+* HOW to build/run with docker
+
+```commandline
+make ui-docker-build
+make ui-docker-test
+```
+
 ## API tests Using Postman Newman
 * CLI report for API
 
@@ -74,6 +81,13 @@ make api-build-local
 make api-test
 ```
 
+* HOW to build/run with docker
+
+```commandline
+api-docker-build
+api-docker-run
+```
+
 * See report 
 
 ```commandline
@@ -91,6 +105,14 @@ make api-report
 
 ```commandline
 make vrt-test
+```
+
+* HOW to build/run/approve with docker
+
+```commandline
+vrt-docker-build
+vrt-docker-run
+vrt-docker-approve
 ```
 
 * HOW to approve bitmaps

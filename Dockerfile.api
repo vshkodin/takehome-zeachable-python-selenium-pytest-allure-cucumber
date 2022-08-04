@@ -1,0 +1,24 @@
+FROM node:12.19.0
+
+ENV API_BASE_URL ""
+ENV API_EMAIL ""
+ENV API_PASSWORD ""
+ENV API_TOKEN ""
+ENV API_ORGID ""
+
+# Base packages
+RUN apt-get update && \
+	apt-get install -y git sudo software-properties-common
+
+WORKDIR /src
+
+RUN npm install -g newman
+RUN npm install -g newman-reporter-allure
+
+COPY --chown=node:node API_TESTING.postman_collection.json .
+COPY --chown=node:node run-collection.js .
+COPY --chown=node:node run_testing.sh .
+
+RUN chmod a+x run_testing.sh
+
+ENTRYPOINT ["/src/run_api.sh"]
