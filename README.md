@@ -16,8 +16,9 @@ cd takehome-zeachable-python-selenium-pytest-allure-cucumber
 #### Dependencies 
 1. In order to run you have to install Python3.6+
 2. You need to have pip installed
-3. install python3 - pip  https://www.python.org/downloads/
-7. Getting dependencies:
+3. You need to have homebrew installed
+4. install python3 - pip  https://www.python.org/downloads/
+5. Getting dependencies:
 ```
 $ pip install virtualenv
 $ python3 virtualenv env
@@ -25,6 +26,7 @@ $ env/Scripss/activate (for win)
 $ source env/bin/activate (for mac-linux)
 $ pip install -r requirements.txt
 $ brew install allure
+$ brew install node
 ```
 
 #### Running  tests
@@ -36,20 +38,22 @@ $ brew install allure
 
 * Headful is default run
 ```
-pytest 
+make ui-test 
 ```
-* in order to run Headless 
+
+* in order to run Headless
+
 ```
-pytest --headless true
+make ui-test-headless
 ```
+
 * See report 
+
 ```commandline
-allure serve allure-report
+make ui-report
 ```
 
-
-
-### API tests Using Postman Newman
+## API tests Using Postman Newman
 * CLI report for API
 
 ![alt text](NewmanPostman.png)
@@ -58,23 +62,45 @@ allure serve allure-report
 
 ![alt text](allure-report-API.png)
 
+* HOW to build
+
+```
+make api-build-local
+```
+
 * HOW to run
-* 
+
 ```
-npm install -g newman
-npm install -g newman-reporter-allure
-newman run  --verbose https---takehome.zeachable.com-.postman_collection.json -r allure --reporter-allure-export allure-report/
+make api-test
+```
+
+* See report 
+
+```commandline
+make api-report
 ```
 
 
-### VRT tests using BackstopJS
+## VRT tests using BackstopJS
 
 * BackstopJS report
 ![alt text](backstopJSReport.png)
 
 
 * HOW to run
+
 ```commandline
- npm install -g backstopjs
- backstop test
+make vrt-test
+```
+
+* HOW to approve bitmaps
+
+```commandline
+make vrt-approve
+```
+
+* See report 
+
+```commandline
+make vrt-report
 ```
