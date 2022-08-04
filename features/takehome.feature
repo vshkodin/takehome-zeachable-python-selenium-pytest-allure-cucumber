@@ -11,3 +11,4 @@ Feature: Takehome zeachable
     Scenario: User is able to open Privacy Policy
         Given I am on Homepage
         Then Click on tou
+        Then Validate page title with text "takehome"

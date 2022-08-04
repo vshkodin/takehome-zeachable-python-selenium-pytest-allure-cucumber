@@ -30,5 +30,8 @@ def validate_sign_up_page(init_driver):
 
 @then(parsers.parse('Click on tou'))
 def validate_sign_up_page(init_driver):
-    prifile = init_driver.find_element(By.CSS_SELECTOR, "[data-toggle='dropdown']")
-    assert prifile.accessible_name == "test@test.com", 'Profile icon is not present'
+    init_driver.find_element(By.CSS_SELECTOR, "[href='/p/terms']").click()
+
+@then(parsers.parse('Validate page title with text "{TEXT}"'))
+def validate_page_title(init_driver, TEXT):
+   assert TEXT in init_driver.title, f"{TEXT} not in {init_driver.title}"
