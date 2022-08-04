@@ -1,4 +1,4 @@
-### Example of UI Testing Framework using Python, Pytest, Pytest-BDD, and Selenium.
+### Example of UI Testing Framework using Python, Pytest, Pytest-BDD, Newman, Postman, BackstopJS, node, Docker,and Selenium.
 
 [Test plan](https://docs.google.com/document/d/1yU7LNGNEMCRSPuB21Mb32SgAE_WPklTZ4qouoAUmvd8/edit?usp=sharing)
 
