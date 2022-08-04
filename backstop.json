@@ -109,6 +109,25 @@
       "expect": 0,
       "misMatchThreshold" : 0,
       "requireSameDimensions": true
+    },
+    {
+      "label": "Forgot Password",
+      "cookiePath": "backstop_data/engine_scripts/cookies.json",
+      "url": "https://sso.zeachable.com/secure/123/identity/forgot_password",
+      "referenceUrl": "",
+      "readyEvent": "",
+      "readySelector": "",
+      "delay": 0,
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "hoverSelector": "",
+      "clickSelector": "",
+      "postInteractionWait": 0,
+      "selectors": [],
+      "selectorExpansion": true,
+      "expect": 0,
+      "misMatchThreshold" : 0,
+      "requireSameDimensions": true
     }
   ],
   "paths": {
