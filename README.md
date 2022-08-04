@@ -107,14 +107,6 @@ make api-report
 make vrt-test
 ```
 
-* HOW to build/run/approve with docker
-
-```commandline
-vrt-docker-build
-vrt-docker-run
-vrt-docker-approve
-```
-
 * HOW to approve bitmaps
 
 ```commandline
@@ -125,4 +117,12 @@ make vrt-approve
 
 ```commandline
 make vrt-report
+```
+
+* HOW to build/run/approve with docker
+
+```commandline
+vrt-docker-build
+vrt-docker-run
+vrt-docker-approve
 ```
