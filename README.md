@@ -24,6 +24,7 @@ $ python3 virtualenv env
 $ env/Scripss/activate (for win)
 $ source env/bin/activate (for mac-linux)
 $ pip install -r requirements.txt
+$ brew install allure
 ```
 
 #### Running  tests
@@ -35,21 +36,35 @@ pytest
 ```
 pytest --headless true
 ```
+* See report 
+```commandline
+allure serve allure-report
+```
+
+
 
 ### API tests Using Postman Newman
-
+* CLI report for API
 ![alt text](NewmanPostman.png)
 
+* Allure report for API
+![alt text](allure-report-API.png)
+
+* HOW to run
 ```
 npm install -g newman
-newman run  --verbose https---takehome.zeachable.com-.postman_collection.json
+npm install -g newman-reporter-allure
+newman run  --verbose https---takehome.zeachable.com-.postman_collection.json -r allure --reporter-allure-export allure-report/
 ```
 
 
 ### VRT tests using BackstopJS
 
+* BackstopJS report
 ![alt text](backstopJSReport.png)
 
+
+* HOW to run
 ```commandline
  npm install -g backstopjs
  backstop test
